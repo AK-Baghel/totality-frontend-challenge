@@ -1,0 +1,14 @@
+.cardMain {
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.cardParent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

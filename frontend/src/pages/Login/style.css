@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.loginMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    background: url('https://st4.depositphotos.com/13349494/23275/i/450/depositphotos_232751862-stock-photo-dark-blue-shabby-wooden-background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.loginHeading {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    padding-block: 1rem;
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 2rem 1rem;
+}
+
+.inputLogin {
+    width: 18rem;
+    height: 2rem;
+    padding: 22px 10px;
+    font-size: 1rem;
+    outline: none;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+
+}
+
+.inputLogin:focus {
+    border-color: rgb(51, 160, 233);
+}
+
+input::placeholder {
+    color: rgb(197, 197, 197);
+}
+
+.loginButton {
+    background-color: white;
+    color: black;
+    width: 18rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: 22px 10px;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.loginButton:hover {
+    transition: all 0.2s ease;
+    background-color: rgb(59, 155, 59);
+    color: white;
+}
+
+.loginPageLink {
+    color: rgb(51, 160, 233);
+    cursor: pointer;
+}
+
+.loginPageLink:hover {
+    text-decoration: underline;
+}
