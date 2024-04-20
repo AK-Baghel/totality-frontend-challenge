@@ -11,6 +11,7 @@ function Card() {
                     <CardTemplate />
                     <CardTemplate />
                     <CardTemplate />
+                    <CardTemplate />
                 </div>
             </div>
         </>

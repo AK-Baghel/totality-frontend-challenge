@@ -75,7 +75,7 @@ const Header = () => {
                         <div className={`headerItem hoverUnderline ${location.pathname === "/cart" ? "active" : ""}`} onClick={() => { routing("/cart") }} >Cart</div>
                         {
                             !show ?
-                                <div className={`headerItem hoverUnderline ${location.pathname === "login" ? "active" : ""}`} onClick={() => { routing("/login") }}>LOGIN/SIGNUP</div>
+                                <div className={`headerItem hoverUnderline ${location.pathname === "/login" || location.pathname === "/signup" ? "active" : ""}`} onClick={() => { routing("/login") }}>LOGIN/SIGNUP</div>
                                 :
                                 ""
                         }

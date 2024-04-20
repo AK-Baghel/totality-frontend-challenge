@@ -2,9 +2,9 @@
     width: 90vw;
     display: flex;
     flex-wrap: wrap;
-
-    justify-content: space-around;
-    gap: 1rem;
+    justify-content: center;
+    /* justify-content: flex-start; */
+    gap: 2rem;
 }
 
 .cardParent {

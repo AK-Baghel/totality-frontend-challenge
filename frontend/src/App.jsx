@@ -5,6 +5,7 @@ import Login from "./pages/Login/Login"
 import SignUp from "./pages/SignUp/SignUp"
 import PrivateComponent from './component/PrivateComponent/PrivateComponent'
 import AppContext from './component/Context/AppContext'
+import Cart from './pages/Cart/Cart'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
 
           <Route element={<PrivateComponent />}>
             <Route exact path='/' element={<Home />} />
+            <Route exact path='/cart' element={<Cart />} />
           </Route>
 
           <Route path='*' element={<Home />} />
