@@ -1,0 +1,245 @@
+.cartSection1Main {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0rem;
+    /* overflow-y: scroll; */
+}
+
+.cartSection1Box1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+
+}
+
+.cartSection1Box1Head {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.cartSection1Box2Del {
+    width: 4vw;
+    text-align: center;
+}
+
+.cartSection1Box2 {
+    display: flex;
+    color: gray;
+    font-size: 1rem;
+}
+
+.cartSection1Box2Sno {
+    width: 3rem;
+    text-align: center;
+}
+
+.cartSection1Box2Cross {
+    width: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: red;
+    cursor: pointer;
+}
+
+.cartSection1Box2Cross:hover {
+    color: rebeccapurple;
+
+}
+
+.cartSection1Box2Details {
+    width: 61vw;
+
+}
+
+
+.cartSection1Box2Quantity {
+    width: 5rem;
+    text-align: center;
+}
+
+.cartSection1Box2Price {
+    width: 5rem;
+    text-align: center;
+}
+
+.cartSection1Box2Total {
+    width: 10vw;
+    text-align: center;
+
+}
+
+
+.cartSection1Box2Details {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.cartSection1Box2DetailsImage {
+    width: 5rem;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartSection1Box2DetailsImg {
+    width: 5rem;
+    height: 5rem;
+}
+
+.cartSection1Box2DetailsBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 0.5rem;
+}
+
+.cartSection1Box2DetailsTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+}
+
+.cartSection1Box2DetailsLocation {
+    color: rgb(0, 43, 160);
+    font-weight: 700;
+
+}
+
+.cartSection1Box2DetailsRooms {
+    color: red;
+    font-weight: 700;
+}
+
+.cartSection1Box2QuantityBox {
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.cartSection1Box2QuantitySign {
+    width: 1.5vw;
+    height: 3vh;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: rgb(31, 31, 31);
+    border: 1px solid rgb(133, 133, 133);
+    padding: 1px 5px 6px 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.cartSection1Box2QuantitySign:hover {
+    background-color: rgb(167, 167, 167);
+}
+
+.cartSection1Box2QuantityCount {
+    color: black;
+    padding: 1px 7px;
+}
+
+.cartSection1Box2SnoBox {
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: 700;
+}
+
+.cartSection1Box2PriceBox {
+    width: 5rem;
+
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartSection1Box2PriceBox {
+    color: black;
+    font-weight: 700;
+
+}
+
+@media(max-width:800px) {
+
+    .cartSection1Box2Details {
+        width: 50vw;
+    }
+
+    .cartSection1Box2QuantityBox {
+        width: 5rem;
+
+    }
+
+    .cartSection1Box2PriceBox {
+        width: 5rem;
+        font-size: 0.9rem;
+
+    }
+
+    .cartSection1Box2DetailsLocation {
+        font-size: 0.8rem;
+    }
+
+    .cartSection1Box2DetailsRooms {
+        font-size: 0.8rem;
+    }
+
+    .cartSection1Box2DetailsTitle {
+        font-size: 0.9rem;
+        font-weight: 800;
+
+    }
+
+    .cartSection1Box2Details {
+        gap: 0.5rem;
+    }
+}
+
+@media(max-width:600px) {
+    .cartSection1Box2Details {
+        width: 40vw;
+    }
+
+    .cartSection1Box2DetailsBox {
+        gap: 0.3rem;
+    }
+
+    .cartSection1Box2DetailsTitle {
+        font-size: 0.7rem;
+    }
+
+    .cartSection1Box2DetailsLocation {
+        font-size: 0.7rem;
+    }
+
+    .cartSection1Box2DetailsRooms {
+        font-size: 0.7rem;
+    }
+
+    .cartBox1 {
+        width: 90vw;
+    }
+
+}
+
+@media(max-width:500px) {
+    .cartBox1 {
+        /* border: 1px solid black; */
+        width: 88vw;
+    }
+}

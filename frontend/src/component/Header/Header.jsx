@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./style.css"
 import { FaBars } from "react-icons/fa6"
-import { RiArrowDropDownLine } from "react-icons/ri"
-import { FaArrowUp } from "react-icons/fa";
+
 
 
 import { IoClose } from "react-icons/io5"
@@ -72,7 +71,7 @@ const Header = () => {
 
                         <div className={`headerItem hoverUnderline ${location.pathname === "/" ? "active" : ""}`} onClick={() => { routing("/") }}>HOME</div>
                         <div className={`headerItem hoverUnderline ${location.pathname === "/favourite" ? "active" : ""}`} onClick={() => { routing("/favourite") }} >Favourite</div>
-                        <div className={`headerItem hoverUnderline ${location.pathname === "/cart" ? "active" : ""}`} onClick={() => { routing("/cart") }} >Cart</div>
+                        <div className={`headerItem hoverUnderline ${location.pathname === "/cart" ? "active" : ""}`} onClick={() => { routing("/cart") }} >Cart <sup className="superScript">(5)</sup></div>
                         {
                             !show ?
                                 <div className={`headerItem hoverUnderline ${location.pathname === "/login" || location.pathname === "/signup" ? "active" : ""}`} onClick={() => { routing("/login") }}>LOGIN/SIGNUP</div>
