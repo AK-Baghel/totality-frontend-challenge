@@ -2,8 +2,10 @@ import React from 'react'
 import CartSection1 from './CartSection1/CartSection1'
 import { MdDelete } from "react-icons/md";
 import "./style.css"
+import { useNavigate } from 'react-router-dom';
 
 function Cart() {
+    const navigate = useNavigate()
     return (
         <div className="cartMain">
             <div className="cartBox1">
@@ -30,7 +32,7 @@ function Cart() {
 
                 <div className="cartFooter">
                     <div className="cartFooterPrice">Total Price : ₹ 3899/-</div>
-                    <div className="cartFooterCheckout">Checkout</div>
+                    <div className="cartFooterCheckout" onClick={() => { navigate('/checkout') }}>Checkout</div>
                 </div>
 
             </div>

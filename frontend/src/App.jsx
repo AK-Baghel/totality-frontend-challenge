@@ -6,6 +6,7 @@ import SignUp from "./pages/SignUp/SignUp"
 import PrivateComponent from './component/PrivateComponent/PrivateComponent'
 import AppContext from './component/Context/AppContext'
 import Cart from './pages/Cart/Cart'
+import Checkout from './pages/Checkout/Checkout'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route element={<PrivateComponent />}>
             <Route exact path='/' element={<Home />} />
             <Route exact path='/cart' element={<Cart />} />
+            <Route exact path='/checkout' element={<Checkout />} />
           </Route>
 
           <Route path='*' element={<Home />} />

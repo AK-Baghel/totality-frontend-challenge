@@ -1,0 +1,98 @@
+.checkoutItemMain {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 0.5rem;
+    width: 30rem;
+}
+
+.checkoutItemBox1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 8px;
+    padding: 4px 5px;
+}
+
+.checkoutItemParent {
+    text-align: center;
+    background-color: #212121;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+}
+
+.checkoutItemBox1Title {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.checkoutItemBox1Price {
+    /* font-weight: 700; */
+    color: rgb(119, 119, 119);
+}
+
+.checkoutCount {
+    color: red;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.checkoutItemMainBox1Parent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 10rem;
+    overflow-y: scroll;
+}
+
+.checkoutItemBox2 {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: 0.5rem;
+    flex-direction: column;
+}
+
+.checkoutItemBox2Section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-between;
+    color: #A29E9C;
+}
+
+.checkoutItemBox2Section1 {
+    font-size: 1rem;
+    font-weight: 700;
+
+}
+
+.checkoutItemBox3 {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0.5rem;
+}
+
+.checkoutItemBox3Total {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.checkoutItemBox3Cost {
+    color: green;
+    font-size: 1.2rem;
+}
+
+@media(max-width:500px) {
+    .checkoutItemMain {
+        width: 23rem;
+    }
+}
