@@ -9,11 +9,26 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-function CardTemplate() {
-    const [fav, setfav] = useState(false)
-    const { privateToggle } = useContext(Context);
-    const checkLogin = () => {
-        if (privateToggle) {
+
+function CardTemplate({ id, img, title, location, rooms, desc, price, fav = false }) {
+
+    const { fetchCartItems, privateToggle, setUserItem, loginId } = useContext(Context);
+
+    const cart = async (id) => {
+        let result = await fetch(`http://localhost:8080/cart`, {
+            method: 'post',
+            body: JSON.stringify({ userId: loginId, itemId: id }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        // if (result) {
+        //     userItemHandle();
+        // }
+    }
+
+    const checkLogin = (id) => {
+        if (!privateToggle) {
             toast.error(`Login Requied`, {
                 position: "top-center",
                 autoClose: 2000,
@@ -26,7 +41,27 @@ function CardTemplate() {
             });
         }
         else {
-            setfav(!fav)
+            cart(id);
+            fetchCartItems();
+        }
+    }
+
+    const userItemHandle = async () => {
+        const data = await fetch("http://localhost:8080/userItem");
+        const result = await data.json();
+        setUserItem(result)
+    }
+
+    const favHandle = async (id) => {
+        let result = await fetch(`http://localhost:8080/favItem/${id}`, {
+            method: 'put',
+            body: JSON.stringify({ fav: !fav }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        if (result) {
+            userItemHandle();
         }
     }
 
@@ -34,25 +69,25 @@ function CardTemplate() {
         <div className="cardTemplateMain">
             <ToastContainer />
             <div className="cardTemplateImage">
-                <img src="https://t3.ftcdn.net/jpg/02/71/08/28/360_F_271082810_CtbTjpnOU3vx43ngAKqpCPUBx25udBrg.jpg" alt="" className="cardTemplateImg" />
+                <img src={img} alt="" className="cardTemplateImg" />
             </div>
-            <div className="cardTemplateTitle">Beach Of Alens</div>
+            <div className="cardTemplateTitle">{title}</div>
             <div className="cardTemplateDesc">
-                <div className="cardTemplateDescData1">Location : New Delhi</div>
-                <div className="cardTemplateDescData2">No. Of Rooms : 3</div>
-                <div className="cardTemplateDescData">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde iure inventore alias illum distinctio. Autem.</div>
+                <div className="cardTemplateDescData1">{`Location : ${location}`}</div>
+                <div className="cardTemplateDescData2">{`No. Of Rooms : ${rooms}`}</div>
+                <div className="cardTemplateDescData">{desc}</div>
             </div>
             <div className="cardTemplateBox">
-                <div className="cardTemplatePrice">₹ 3899/-</div>
-                <div className="cardTemplateButton" onClick={checkLogin}>Book Now</div>
+                <div className="cardTemplatePrice">{`₹ ${price}/-`}</div>
+                <div className="cardTemplateButton" onClick={() => { checkLogin(id) }}>Book Now</div>
             </div>
             {
                 <div className={`cardTempFavBox  ${fav ? 'cardTempFavBoxBorder' : ""}`} onClick={checkLogin}>
                     {
                         fav ?
-                            <FaHeart className="cardTemplateFav" />
+                            <FaHeart className="cardTemplateFav" onClick={() => { favHandle(id) }} />
                             :
-                            <FaRegHeart className='cardTemplateNoFav' />
+                            <FaRegHeart className='cardTemplateNoFav' onClick={() => { favHandle(id) }} />
                     }
 
                 </div>

@@ -13,6 +13,37 @@ body {
     /* Hide horizontal scrollbar */
 }
 
+.userMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.userChar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(147, 77, 212);
+    /* padding: 1rem; */
+    border: 1px solid white;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    color: black;
+    font-weight: 700;
+}
+
+.userLogout {
+    color: rgb(0, 201, 0);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.userName {
+    font-size: 1.2rem;
+}
+
 .superScript {
     color: rgb(52, 230, 52);
 }
@@ -291,6 +322,10 @@ body {
         justify-content: center;
 
         align-items: flex-start;
+    }
+
+    .hidingCss {
+        display: none;
     }
 
     .headerLogo {

@@ -7,7 +7,7 @@ import PrivateComponent from './component/PrivateComponent/PrivateComponent'
 import AppContext from './component/Context/AppContext'
 import Cart from './pages/Cart/Cart'
 import Checkout from './pages/Checkout/Checkout'
-
+import Favourite from './pages/Favourite/Favourite'
 function App() {
 
   return (
@@ -26,11 +26,12 @@ function App() {
 
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/signup' element={<SignUp />} />
+          <Route exact path='/' element={<Home />} />
 
           <Route element={<PrivateComponent />}>
-            <Route exact path='/' element={<Home />} />
             <Route exact path='/cart' element={<Cart />} />
             <Route exact path='/checkout' element={<Checkout />} />
+            <Route exact path='/favourite' element={<Favourite />} />
           </Route>
 
           <Route path='*' element={<Home />} />
